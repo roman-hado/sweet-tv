@@ -1,0 +1,98 @@
+.participate {
+  &__conditions {
+    font-family: 'Avenir Next Cyr', sans-serif;
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 50px;
+
+    @include for-mobile {
+      align-items: center;
+      font-size: 16px;
+      margin-top: 50px;
+      flex-direction: column;
+      padding-left: 78px;
+      gap: 28px;
+      transform: translateX(-60px);
+    }
+  }
+
+  &__condition {
+    margin-left: 8px;
+    display: flex;
+
+    &--bg-text {
+      margin-top: -25px;
+      font-family: 'Avenir Next Cyr Heavy', sans-serif;
+      font-weight: 800;
+      font-size: 129.3px;
+      color: $aqua-spring;
+
+      @include for-mobile {
+        font-size: 100px;
+      }
+    }
+
+    &--text {
+      margin: 32px 0 0 -34px;
+      max-width: 320px;
+      font-size: 18px;
+      line-height: 21.6px;
+
+      &-bold {
+        font-family: 'Avenir Next Cyr Medium', sans-serif;
+        font-weight: 750;
+      }
+
+      &--second {
+        @extend .participate__condition--text;
+      }
+
+      @include for-mobile {
+        font-size: 16px;
+        margin: 22px 0 0 -34px;
+        max-width: 266px;
+        line-height: 19px;
+      }
+    }
+
+    &--img {
+      width: 28px;
+      height: 38px;
+
+      @include for-mobile {
+        width: 22px;
+        height: 30px;
+      }
+    }
+
+    &--additional-info {
+      padding-top: 34px;
+      padding-left: 16px;
+      margin-left: 60px;
+      width: 170px;
+
+      &--text {
+        font-family: 'Avenir Next Cyr', sans-serif;
+        margin-top: -2px;
+        margin-left: 10px;
+        font-weight: 600;
+
+        & > a {
+          color: $alto;
+        }
+      }
+
+      @include for-mobile {
+        display: flex;
+        align-items: center;
+        width: 280px;
+        padding-top: 0;
+        margin-left: 30px;
+        margin-top: -8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.social-networks {
+  width: 1052px;
+  height: 448px;
+  background: rgba(124, 253, 92, 0.1);
+  border-radius: 20px;
+  margin: 87px auto 0;
+  display: flex;
+  color: $elephant;
+
+  @include for-mobile {
+    width: 332px;
+    height: 477px;
+    margin-top: 64px;
+    flex-direction: column-reverse;
+  }
+
+  &__logo {
+    width: 50%;
+    padding-top: 35px;
+    padding-left: 28px;
+
+    @include for-mobile {
+      width: 290px;
+      text-align: center;
+      transform: translateY(50px);
+
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__info {
+    width: 50%;
+    padding: 0 18px;
+
+    &--text {
+      width: 441px;
+      margin-top: 18px;
+      font-family: 'Avenir Next Cyr', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+
+      & > a {
+        color: $thunderbird;
+      }
+    }
+
+    @include for-mobile {
+      width: 100%;
+
+      &--text {
+        max-width: 270px;
+        text-align: center;;
+        margin: 15px auto 0;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Avenir Next Cyr Heavy', sans-serif;
+    margin-top: 64px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include for-mobile {
+      line-height: 28px;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  &__icons {
+    margin-top: 28px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+    @include for-mobile {
+      margin-top: 30px;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    @include for-mobile {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

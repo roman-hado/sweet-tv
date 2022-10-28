@@ -1,0 +1,35 @@
+.title {
+  font-family: 'Avenir Next Cyr Heavy', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  width: max-content;
+
+  &--take-part {
+    transform: translateX(40px);
+    margin: 300px auto 0;
+  }
+
+  &--activation {
+    transform: translateX(-54px);
+    margin: 144px auto 0;
+
+    @include for-mobile {
+      margin-top: 68px;
+      max-width: 274px;
+      transform: translateX(0);
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  @include for-mobile {
+    font-size: 24px;
+    text-align: center;
+
+    &--take-part {
+      transform: translateX(0);
+      margin: 156px auto 0;
+      width: 220px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.promo-code {
+  width: 100%;
+  margin-top: 158px;
+  display: flex;
+
+  @include for-mobile {
+    flex-direction: column-reverse;
+  }
+
+  &__info {
+    max-width: 480px;
+    color: $oxford-blue;
+    padding: 0 30px;
+
+    @include for-mobile {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    &--title {
+      font-family: 'Avenir Next Cyr Heavy', sans-serif;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 41px;
+
+      @include for-mobile {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        margin-top: 40px;
+      }
+    }
+
+    &--subtitle {
+      margin-top: 20px;
+      font-family: 'Avenir Next Cyr', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+
+      @include for-mobile {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+      }
+    }
+
+    &--text {
+      @extend .promo-code__info--subtitle;
+
+      margin-top: 69px;
+      line-height: 19px;
+      font-size: 16px;
+
+      @include for-mobile {
+        max-width: 200px;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        margin: 42px auto 0;
+      }
+    }
+
+    &--link {
+      position: relative;
+      font-family: 'Avenir Next Cyr Medium', sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      width: 238px;
+      height: 40px;
+      font-size: 18px;
+      line-height: 54px;
+      margin-top: 18px;
+      padding-left: 34px;
+      letter-spacing: 0.135em;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        position: absolute;
+        border: 6px dashed $elephant;
+        border-radius: 5px;
+        top: -4px;
+        bottom: -4px;
+        left: -4px;
+        right: -4px;
+      }
+
+      &-img {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        margin-left: 36px;
+        cursor: pointer;
+      }
+
+      @include for-mobile {
+        width: 300px;
+        height: 45px;
+        margin: 10px 0 0 -28px;
+        padding-left: 70px;
+
+        &-img {
+          margin-left: 46px;
+        }
+      }
+    }
+
+    &--social-networks {
+      margin-top: 22px;
+      display: flex;
+      gap: 15px;
+
+      & > img {
+        cursor: pointer;
+      }
+
+      @include for-mobile {
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: -8px;
+    margin-left: 112px;
+
+    @include for-mobile {
+      flex-direction: column-reverse;
+      width: 280px;
+      margin: 24px auto 0;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

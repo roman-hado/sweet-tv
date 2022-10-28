@@ -1,0 +1,25 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "container";
+@import "title";
+@import "step";
+@import "header";
+@import "participate";
+@import "social-networks";
+@import "promo-code";
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: 'Avenir Next Cyr', sans-serif;
+  overflow-x: hidden;
+  color: $oxford-blue;
+}
+

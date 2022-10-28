@@ -1,0 +1,75 @@
+.step {
+  display: flex;
+  gap: 100px;
+
+  @include for-mobile {
+    gap: 10px;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    height: max-content;
+
+    &--bg {
+      font-family: 'Avenir Next Cyr Heavy', sans-serif;
+      color: $aqua-spring;
+      font-weight: 800;
+      font-size: 129.273px;
+      line-height: 155px;
+    }
+
+    &--text {
+      font-weight: 600;
+      font-size: 24px;
+      font-family: 'Avenir Next Cyr', sans-serif;
+      width: 296px;
+    }
+
+    @include for-mobile {
+      &--bg {
+        font-size: 100px;
+      }
+
+      &--text {
+        line-height: 19px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__first {
+    margin-top: 88px;
+    margin-left: 46px;
+
+    &--logo {
+      margin-top: -10px;
+      margin-left: -14px;
+    }
+
+    &--text {
+      margin-left: -46px;
+    }
+
+    @include for-mobile {
+      margin-top: 8px;
+      margin-left: 40px;
+
+      &--logo {
+        width: 310px;
+
+        & > img {
+          width: 100%;
+        }
+      }
+
+      &--text {
+        margin-top: 18px;
+        margin-left: -26px;
+      }
+    }
+  }
+}

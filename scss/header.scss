@@ -1,0 +1,181 @@
+.header {
+  font-family: 'Avenir Next Cyr Medium', sans-serif;
+  position: relative;
+  width: 100%;
+  height: 892px;
+  color: $white;
+
+  @include for-mobile {
+    height: 540px;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__intro {
+    padding-top: 59px;
+
+    @include for-mobile {
+      padding-top: 36px;
+    }
+
+    &--first-text {
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-1.84deg) translateX(-12px);
+      font-size: 37.8px;
+      font-weight: 750;
+
+      &--small {
+        font-size: 25px;
+      }
+
+      @include for-mobile {
+        font-size: 18px;
+
+        &--small {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &--photo {
+      position: relative;
+      margin: 2px auto 0;
+      width: 280px;
+      transform: translateX(-12px);
+
+      &-arrow-img {
+        position: absolute;
+        display: inline-block;
+        top: 18px;
+        right: -69px;
+      }
+
+      @include for-mobile {
+        &-arrow-img {
+          position: absolute;
+          display: inline-block;
+          top: 8px;
+          width: 60px;
+          right: 12px;
+        }
+
+        &--img {
+          width: 156px;
+          transform: translateX(66px);
+        }
+      }
+    }
+
+    &--second-text {
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-1.54deg) translate(-32px, 22px);
+      font-size: 54.3px;
+      font-weight: 750;
+
+      @include for-mobile {
+        font-size: 30px;
+        transform: rotate(-1.54deg) translate(-16px, 10px);
+      }
+    }
+
+    &--prize-text {
+      margin: 46px auto 0;
+      font-family: 'Avenir Next Cyr Heavy', sans-serif;
+      text-align: center;
+      font-weight: 800;
+      font-size: 42.6px;
+      transform: rotate(-2.28deg) translateX(1px);
+
+      &--selected {
+        display: inline-block;
+        padding: 0 10px;
+        background-color: $alizarin;
+        height: 57px;
+      }
+
+      @include for-mobile {
+        margin-top: 30px;
+        width: 290px;
+        font-size: 24px;
+        transform: rotate(-2.28deg) translateX(0px);
+
+        &--selected {
+          display: inline-block;
+          padding: 0 10px;
+          background-color: $alizarin;
+          height: 26px;
+        }
+      }
+    }
+
+    &--second-prize-text {
+      margin-top: 26px;
+      transform: rotate(0deg) translate(70px, -6px);
+
+      &--selected {
+        @extend .header__intro--prize-text--selected;
+
+        padding-top: 5px;
+        padding-left: 2px;
+        transform: rotate(0.5deg);
+      }
+
+      @include for-mobile {
+        margin-top: 20px;
+        transform: rotate(4.46deg) translate(70px, -6px);
+      }
+    }
+  }
+
+  &__prize {
+    margin: 105px auto 0;
+    width: 840px;
+    transform: translateX(-57px);
+
+    &--img {
+      width: 100%;
+    }
+
+    @include for-mobile {
+      margin-top: 16px;
+      width: 360px;
+      transform: translateX(0);
+    }
+  }
+
+  &__button--mobile {
+    display: none;
+    width: 228px;
+    height: 40px;
+    margin: 0 auto;
+    background: $white;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      scale: (0.9);
+    }
+
+    @include for-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+  }
+}
