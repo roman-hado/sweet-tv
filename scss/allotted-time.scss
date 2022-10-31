@@ -1,0 +1,181 @@
+.allotted-time {
+  font-family: 'Avenir Next Cyr Heavy', sans-serif;
+  font-weight: 800;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  margin-top: 150px;
+  color: $white;
+  overflow-x: hidden;
+
+  @include for-mobile {
+    margin-top: 50px;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -3;
+    height: 569px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    padding-top: 71px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 65px;
+
+    @include for-mobile {
+      padding-top: 38px;
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 1;
+    margin-top: 36px;
+    text-align: center;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+    font-weight: 750;
+    font-size: 24px;
+    line-height: 29px;
+
+    @include for-mobile {
+      margin-top: 41px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__time {
+    position: relative;
+    z-index: 2;
+
+    &--wrapper {
+      margin: 19px auto 0;
+      display: flex;
+      width: 231px;
+
+      @include for-mobile {
+        margin: 22px auto 0;
+      }
+    }
+
+    &--block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 61px;
+      height: 59px;
+      border-radius: 3.6px;
+      background-color: $thunderbird;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &--block-name {
+      font-family: 'Avenir Next Cyr Medium', sans-serif;
+      font-weight: 450;
+      width: 61px;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+
+  &__colon {
+    font-size: 25px;
+    width: 10px;
+    margin: 0 7px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__mobile-bg {
+    display: none;
+
+    @include for-mobile {
+      display: block;
+      margin-top: 20px;
+      margin-left: -14px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    width: 1178px;
+    margin: 0 auto;
+
+    @include for-mobile {
+      display: none;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 50%;
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &--people {
+      max-width: 392px;
+      max-height: 429px;
+      transform: translate(14px, -155px);
+    }
+
+    &--car {
+      position: relative;
+      z-index: 1;
+      max-width: 542px;
+      max-height: 360px;
+      transform: translate(62px, 0);
+    }
+
+    &--phone {
+      top: 16px;
+      left: 56px;
+      position: absolute;
+
+      &-back {
+        position: relative;
+        z-index: -1;
+        top: 14px;
+        left: -24px;
+        width: 160px;
+        height: 230px;
+      }
+
+      &-front {
+        position: absolute;
+        left: -90px;
+        top: 30px;
+        width: 220px;
+        height: 260px;      }
+    }
+  }
+
+  &__phone-name {
+    position: absolute;
+    z-index: 5;
+    top: 84px;
+    left: -86px;
+  }
+
+  &__car-name {
+    position: absolute;
+    z-index: 5;
+    top: 2px;
+    left: 144px;
+  }
+}

@@ -359,20 +359,23 @@ input[type=number] {
 
 .step {
   display: flex;
-  gap: 100px;
 }
 @media (max-width: 768px) {
   .step {
-    gap: 10px;
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
   }
 }
+.step__logo > img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .step__info {
   display: flex;
   align-items: center;
-  height: max-content;
+  max-height: max-content;
 }
 .step__info--bg {
   font-family: "Avenir Next Cyr Heavy", sans-serif;
@@ -382,10 +385,20 @@ input[type=number] {
   line-height: 155px;
 }
 .step__info--text {
+  position: relative;
   font-weight: 600;
   font-size: 24px;
   font-family: "Avenir Next Cyr", sans-serif;
-  width: 296px;
+  max-width: 296px;
+  line-height: 29px;
+}
+.step__info--link {
+  display: inline-block;
+  font-family: "Avenir Next Cyr", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  margin-top: 4px;
 }
 @media (max-width: 768px) {
   .step__info--bg {
@@ -395,6 +408,9 @@ input[type=number] {
     line-height: 19px;
     font-size: 16px;
   }
+  .step__info--link {
+    margin-top: 10px;
+  }
 }
 .step__first {
   margin-top: 88px;
@@ -402,25 +418,184 @@ input[type=number] {
 }
 .step__first--logo {
   margin-top: -10px;
-  margin-left: -14px;
+  margin-left: 86px;
 }
 .step__first--text {
+  margin-top: 38px;
   margin-left: -46px;
 }
 @media (max-width: 768px) {
   .step__first {
     margin-top: 8px;
-    margin-left: 40px;
+    margin-left: -70px;
   }
   .step__first--logo {
     width: 310px;
+    margin-top: 2px;
+    margin-left: 66px;
   }
   .step__first--logo > img {
     width: 100%;
   }
   .step__first--text {
-    margin-top: 18px;
+    max-width: 187px;
+    margin-top: 48px;
     margin-left: -26px;
+  }
+}
+.step__second {
+  margin-top: 20px;
+  margin-left: 54px;
+}
+.step__second--logo {
+  max-width: 386px;
+  max-height: 224px;
+}
+.step__second--info {
+  margin-top: 36px;
+}
+.step__second--bg {
+  margin-left: -8px;
+}
+.step__second--text {
+  margin-top: 2px;
+  margin-left: -49px;
+}
+@media (max-width: 768px) {
+  .step__second {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -40px;
+    margin-left: -80px;
+  }
+  .step__second--text {
+    width: 194px;
+    margin-top: 34px;
+    margin-left: -30px;
+  }
+  .step__second--logo {
+    margin-top: -16px;
+    margin-left: 80px;
+    width: 329px;
+    height: 191px;
+  }
+}
+.step__third {
+  margin-top: 80px;
+  margin-left: 56px;
+}
+.step__third--logo {
+  max-width: 408px;
+  max-height: 234px;
+  margin-top: -2px;
+  margin-left: -10px;
+}
+.step__third--info {
+  margin-top: 36px;
+}
+.step__third--bg {
+  margin-left: -8px;
+  transform: translateY(6px);
+}
+.step__third--text {
+  margin-top: 15px;
+  margin-left: -46px;
+}
+@media (max-width: 768px) {
+  .step__third {
+    margin-top: -34px;
+    margin-left: 36px;
+  }
+  .step__third--text {
+    margin-top: 40px;
+    margin-left: -30px;
+  }
+  .step__third--logo {
+    margin-left: -26px;
+    width: 346px;
+    height: 200px;
+  }
+}
+.step__fourth {
+  margin-top: 65px;
+  margin-left: 112px;
+}
+.step__fourth--logo {
+  max-width: 330px;
+  max-height: 332px;
+  margin-top: -2px;
+  margin-left: -10px;
+}
+.step__fourth--info {
+  margin-top: 70px;
+  margin-left: 10px;
+}
+.step__fourth--bg {
+  margin-left: -8px;
+  transform: translateY(6px);
+}
+.step__fourth--text {
+  margin-top: 12px;
+  margin-left: -52px;
+  max-width: 403px;
+}
+@media (max-width: 768px) {
+  .step__fourth {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -80px;
+    margin-left: -16px;
+  }
+  .step__fourth--text {
+    margin-top: 46px;
+    margin-left: -30px;
+    width: 255px;
+  }
+  .step__fourth--logo {
+    width: 310px;
+    margin-top: -54px;
+    margin-left: 36px;
+  }
+}
+.step__fifth {
+  margin-top: 22px;
+  margin-left: 48px;
+  position: relative;
+}
+.step__fifth--logo {
+  margin-top: -72px;
+  margin-left: -82px;
+  max-width: 703px;
+  max-height: 586px;
+}
+.step__fifth--info {
+  margin-top: 70px;
+  margin-left: 10px;
+}
+.step__fifth--bg {
+  margin-left: -8px;
+  transform: translateY(6px);
+}
+.step__fifth--text {
+  margin-top: 20px;
+  margin-left: -48px;
+  max-width: 312px;
+}
+@media (max-width: 768px) {
+  .step__fifth {
+    margin-top: -122px;
+    margin-left: -53px;
+  }
+  .step__fifth--text {
+    margin-top: 18px;
+    margin-left: -24px;
+    width: 209px;
+  }
+  .step__fifth--logo {
+    margin-top: -12px;
+    margin-left: 46px;
+    width: 360px;
+    height: 300px;
   }
 }
 
@@ -768,6 +943,14 @@ input[type=number] {
 }
 .social-networks__icon {
   cursor: pointer;
+  transition-duration: 0.2s;
+}
+.social-networks__icon:hover {
+  border-radius: 50%;
+  transform: scale(1.05);
+}
+.social-networks__icon:active {
+  scale: 0.95;
 }
 @media (max-width: 768px) {
   .social-networks__icon {
@@ -854,6 +1037,7 @@ input[type=number] {
   padding-left: 34px;
   letter-spacing: 0.135em;
   overflow: hidden;
+  cursor: pointer;
 }
 .promo-code__info--link:before {
   content: "";
@@ -890,6 +1074,13 @@ input[type=number] {
 }
 .promo-code__info--social-networks > img {
   cursor: pointer;
+  transition-duration: 0.2s;
+}
+.promo-code__info--social-networks > img:hover {
+  transform: scale(1.05);
+}
+.promo-code__info--social-networks > img:active {
+  scale: 0.95;
 }
 @media (max-width: 768px) {
   .promo-code__info--social-networks {
@@ -909,6 +1100,273 @@ input[type=number] {
   .promo-code__logo > img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.allotted-time {
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  font-weight: 800;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  margin-top: 150px;
+  color: #fff;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .allotted-time {
+    margin-top: 50px;
+  }
+}
+.allotted-time__bg {
+  position: absolute;
+  z-index: -3;
+  height: 569px;
+  width: 100%;
+  object-fit: cover;
+}
+.allotted-time__title {
+  position: relative;
+  z-index: 1;
+  padding-top: 71px;
+  font-size: 60px;
+  text-align: center;
+  line-height: 65px;
+}
+@media (max-width: 768px) {
+  .allotted-time__title {
+    padding-top: 38px;
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+.allotted-time__subtitle {
+  position: relative;
+  z-index: 1;
+  margin-top: 36px;
+  text-align: center;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 750;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 768px) {
+  .allotted-time__subtitle {
+    margin-top: 41px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+.allotted-time__time {
+  position: relative;
+  z-index: 2;
+}
+.allotted-time__time--wrapper {
+  margin: 19px auto 0;
+  display: flex;
+  width: 231px;
+}
+@media (max-width: 768px) {
+  .allotted-time__time--wrapper {
+    margin: 22px auto 0;
+  }
+}
+.allotted-time__time--block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 61px;
+  height: 59px;
+  border-radius: 3.6px;
+  background-color: #D8271C;
+  font-size: 24px;
+  line-height: 30px;
+}
+.allotted-time__time--block-name {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450;
+  width: 61px;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+}
+.allotted-time__colon {
+  font-size: 25px;
+  width: 10px;
+  margin: 0 7px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.allotted-time__mobile-bg {
+  display: none;
+}
+@media (max-width: 768px) {
+  .allotted-time__mobile-bg {
+    display: block;
+    margin-top: 20px;
+    margin-left: -14px;
+  }
+}
+.allotted-time__images {
+  display: flex;
+  width: 1178px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .allotted-time__images {
+    display: none;
+  }
+}
+.allotted-time__image {
+  position: relative;
+  width: 50%;
+}
+.allotted-time__image--img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.allotted-time__image--people {
+  max-width: 392px;
+  max-height: 429px;
+  transform: translate(14px, -155px);
+}
+.allotted-time__image--car {
+  position: relative;
+  z-index: 1;
+  max-width: 542px;
+  max-height: 360px;
+  transform: translate(62px, 0);
+}
+.allotted-time__image--phone {
+  top: 16px;
+  left: 56px;
+  position: absolute;
+}
+.allotted-time__image--phone-back {
+  position: relative;
+  z-index: -1;
+  top: 14px;
+  left: -24px;
+  width: 160px;
+  height: 230px;
+}
+.allotted-time__image--phone-front {
+  position: absolute;
+  left: -90px;
+  top: 30px;
+  width: 220px;
+  height: 260px;
+}
+.allotted-time__phone-name {
+  position: absolute;
+  z-index: 5;
+  top: 84px;
+  left: -86px;
+}
+.allotted-time__car-name {
+  position: absolute;
+  z-index: 5;
+  top: 2px;
+  left: 144px;
+}
+
+.footer {
+  position: relative;
+}
+.footer__title {
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #2D3945;
+  max-width: 579px;
+  margin: 160px auto 0;
+  transform: translateX(220px);
+}
+@media (max-width: 768px) {
+  .footer__title {
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 29px;
+    width: 100%;
+    text-align: center;
+    margin-top: 66px;
+    transform: translateX(0);
+  }
+}
+.footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Avenir Next Cyr", sans-serif;
+  width: 243px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #D8271C;
+  margin: 43px auto 0;
+  transform: translateX(55px);
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.footer__button:hover {
+  scale: 1.05;
+}
+.footer__button:active {
+  scale: 1;
+}
+@media (max-width: 768px) {
+  .footer__button {
+    width: 304px;
+    transform: translateX(0);
+  }
+}
+.footer__bg {
+  margin-top: 70px;
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  height: 520px;
+}
+.footer__bg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer__prize-photo {
+  max-width: 857px;
+  height: 668px;
+  object-fit: contain;
+  margin-top: -332px;
+  margin-left: -166px;
+}
+@media (max-width: 768px) {
+  .footer__prize-photo {
+    width: 460px;
+    height: 420px;
+    margin-top: -12px;
+    margin-left: -136px;
+  }
+}
+.footer__copyright {
+  margin-top: 16px;
+  font-family: "Avenir Next Cyr", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  transform: translateX(-28px);
+}
+@media (max-width: 768px) {
+  .footer__copyright {
+    font-size: 16px;
+    line-height: 70px;
+    transform: translate(0);
+    margin-top: -4px;
   }
 }
 

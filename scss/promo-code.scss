@@ -76,6 +76,7 @@
       padding-left: 34px;
       letter-spacing: 0.135em;
       overflow: hidden;
+      cursor: pointer;
 
       &:before {
         content: "";
@@ -115,6 +116,15 @@
 
       & > img {
         cursor: pointer;
+        transition-duration: 0.2s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &:active {
+          scale: 0.95;
+        }
       }
 
       @include for-mobile {

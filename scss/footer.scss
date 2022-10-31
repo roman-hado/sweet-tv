@@ -1,0 +1,100 @@
+.footer {
+  position: relative;
+
+  &__title {
+    font-family: 'Avenir Next Cyr Heavy', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: $oxford-blue;
+    max-width: 579px;
+    margin: 160px auto 0;
+    transform: translateX(220px);
+
+    @include for-mobile {
+      padding: 0 10px;
+      font-size: 24px;
+      line-height: 29px;
+      width: 100%;
+      text-align: center;
+      margin-top: 66px;
+      transform: translateX(0);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Avenir Next Cyr', sans-serif;
+    width: 243px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $thunderbird;
+    margin: 43px auto 0;
+    transform: translateX(55px);
+    font-weight: 600;
+    font-size: 18px;
+    color: $white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    &:active {
+      scale: 1;
+    }
+
+    @include for-mobile {
+      width: 304px;
+      transform: translateX(0);
+    }
+  }
+
+  &__bg {
+    margin-top: 70px;
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+    height: 520px;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__prize-photo {
+    max-width: 857px;
+    height: 668px;
+    object-fit: contain;
+    margin-top: -332px;
+    margin-left: -166px;
+
+    @include for-mobile {
+      width: 460px;
+      height: 420px;
+      margin-top: -12px;
+      margin-left: -136px;
+    }
+  }
+
+  &__copyright {
+    margin-top: 16px;
+    font-family: 'Avenir Next Cyr', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    transform: translateX(-28px);
+
+    @include for-mobile {
+      font-size: 16px;
+      line-height: 70px;
+      transform: translate(0);
+      margin-top: -4px;
+    }
+  }
+}

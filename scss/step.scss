@@ -1,18 +1,24 @@
 .step {
   display: flex;
-  gap: 100px;
 
   @include for-mobile {
-    gap: 10px;
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
   }
 
+  &__logo {
+    & > img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   &__info {
     display: flex;
     align-items: center;
-    height: max-content;
+    max-height: max-content;
 
     &--bg {
       font-family: 'Avenir Next Cyr Heavy', sans-serif;
@@ -23,10 +29,21 @@
     }
 
     &--text {
+      position: relative;
       font-weight: 600;
       font-size: 24px;
       font-family: 'Avenir Next Cyr', sans-serif;
-      width: 296px;
+      max-width: 296px;
+      line-height: 29px;
+    }
+
+    &--link {
+      display: inline-block;
+      font-family: 'Avenir Next Cyr', sans-serif;
+      font-size: 16px;
+      color: $black;
+      font-weight: 400;
+      margin-top: 4px;
     }
 
     @include for-mobile {
@@ -38,6 +55,10 @@
         line-height: 19px;
         font-size: 16px;
       }
+
+      &--link {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -47,19 +68,22 @@
 
     &--logo {
       margin-top: -10px;
-      margin-left: -14px;
+      margin-left: 86px;
     }
 
     &--text {
+      margin-top: 38px;
       margin-left: -46px;
     }
 
     @include for-mobile {
       margin-top: 8px;
-      margin-left: 40px;
+      margin-left: -70px;
 
       &--logo {
         width: 310px;
+        margin-top: 2px;
+        margin-left: 66px;
 
         & > img {
           width: 100%;
@@ -67,8 +91,188 @@
       }
 
       &--text {
-        margin-top: 18px;
+        max-width: 187px;
+        margin-top: 48px;
         margin-left: -26px;
+      }
+    }
+  }
+
+  &__second {
+    margin-top: 20px;
+    margin-left: 54px;
+
+    &--logo {
+      max-width: 386px;
+      max-height: 224px;
+    }
+
+    &--info {
+      margin-top: 36px;
+    }
+
+    &--bg {
+      margin-left: -8px;
+    }
+
+    &--text {
+      margin-top: 2px;
+      margin-left: -49px;
+    }
+
+    @include for-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: -40px;
+      margin-left: -80px;
+
+      &--text {
+        width: 194px;
+        margin-top: 34px;
+        margin-left: -30px;
+      }
+
+      &--logo {
+        margin-top: -16px;
+        margin-left: 80px;
+        width: 329px;
+        height: 191px;
+      }
+    }
+  }
+
+  &__third {
+    margin-top: 80px;
+    margin-left: 56px;
+
+    &--logo {
+      max-width: 408px;
+      max-height: 234px;
+      margin-top: -2px;
+      margin-left: -10px;
+    }
+
+    &--info {
+      margin-top: 36px;
+    }
+
+    &--bg {
+      margin-left: -8px;
+      transform: translateY(6px);
+    }
+
+    &--text {
+      margin-top: 15px;
+      margin-left: -46px;
+    }
+
+    @include for-mobile {
+      margin-top: -34px;
+      margin-left: 36px;
+
+      &--text {
+        margin-top: 40px;
+        margin-left: -30px;
+      }
+
+      &--logo {
+        margin-left: -26px;
+        width: 346px;
+        height: 200px;
+      }
+    }
+  }
+
+  &__fourth {
+    margin-top: 65px;
+    margin-left: 112px;
+
+    &--logo {
+      max-width: 330px;
+      max-height: 332px;
+      margin-top: -2px;
+      margin-left: -10px;
+    }
+
+    &--info {
+      margin-top: 70px;
+      margin-left: 10px;
+    }
+
+    &--bg {
+      margin-left: -8px;
+      transform: translateY(6px);
+    }
+
+    &--text {
+      margin-top: 12px;
+      margin-left: -52px;
+      max-width: 403px;
+    }
+
+    @include for-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: -80px;
+      margin-left: -16px;
+
+      &--text {
+        margin-top: 46px;
+        margin-left: -30px;
+        width: 255px;
+      }
+
+      &--logo {
+        width: 310px;
+        margin-top: -54px;
+        margin-left: 36px;
+      }
+    }
+  }
+
+  &__fifth {
+    margin-top: 22px;
+    margin-left: 48px;
+    position: relative;
+
+    &--logo {
+      margin-top: -72px;
+      margin-left: -82px;
+      max-width: 703px;
+      max-height: 586px;
+    }
+
+    &--info {
+      margin-top: 70px;
+      margin-left: 10px;
+    }
+
+    &--bg {
+      margin-left: -8px;
+      transform: translateY(6px);
+    }
+
+    &--text {
+      margin-top: 20px;
+      margin-left: -48px;
+      max-width: 312px;
+    }
+
+    @include for-mobile {
+      margin-top: -122px;
+      margin-left: -53px;
+
+      &--text {
+        margin-top: 18px;
+        margin-left: -24px;
+        width: 209px;
+      }
+
+      &--logo {
+        margin-top: -12px;
+        margin-left: 46px;
+        width: 360px;
+        height: 300px;
       }
     }
   }
